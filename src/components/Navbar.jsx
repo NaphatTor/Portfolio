@@ -59,7 +59,7 @@ export default function Navbar() {
           <NavLink to="#about">ABOUT</NavLink>
           <NavLink to="#exp">WORK EXPERIENCE</NavLink>
           <NavLink to="#skills">SKILLS</NavLink>
-          <NavLink target="_blank" to="https://az-blob.kanomnutt.site/portfolio/ThanachaiT-Resume.pdf">RESUME</NavLink>
+          <NavLink target="_blank" to="https://stseakanomnutt.blob.core.windows.net/portfolio/ThanachaiT-Resume.pdf">RESUME</NavLink>
         </div>
         <MobileNav open={open} setOpen={setOpen} />
       </div>
