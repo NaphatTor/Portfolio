@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Run NSLOOKUP
-        run: nslookup ${{ secrets.SONAR_HOST_URL }}
+        run: nslookup sonarqube.nuttabyte.online
       # - uses: sonarsource/sonarqube-scan-action@master
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
