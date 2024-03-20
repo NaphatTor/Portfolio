@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: selft-hosted
+    runs-on: KANOMNUTT
     permissions: read-all
     steps:
       - uses: actions/checkout@v2
