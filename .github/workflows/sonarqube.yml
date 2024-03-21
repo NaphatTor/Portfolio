@@ -15,10 +15,18 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Run NSLOOKUP
-        run: nslookup ${{ secrets.SONAR_HOST_URL }}
-      - uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - name: Login Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.Azure_Credential }}
+      - name: Download Keytool
+        run: |
+          az storage blob download --account-name stseakanomnutttf --container-name keytool --name sonar.keystore --file sonar.keytool
+          pwd
+          ls -latr
+      # - uses: sonarsource/sonarqube-scan-action@master
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      #     SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=./sonar.keystore
 
