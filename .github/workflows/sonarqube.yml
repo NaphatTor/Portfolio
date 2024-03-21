@@ -11,6 +11,8 @@ jobs:
     name: Build
     # runs-on: KANOMNUTT
     runs-on: ubuntu-latest
+    env:
+      TZ: "Asia/Bangkok"
     permissions: read-all
     steps:
       - uses: actions/checkout@v2
@@ -22,12 +24,12 @@ jobs:
           creds: ${{ secrets.Azure_Credential }}
       - name: Download Keytool
         run: |
-          az storage blob download --account-name stseakanomnutttf --container-name keytool --name sonar.keystore --file sonar.keytool
+          az storage blob download --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --container-name ${{ secrets.AZURE_CONTAINER_NAME }} --name ${{ secrets.AZURE_BLOB_NAME }} --file ${{ secrets.SONAR_KEY_TOOL }}
           pwd
           ls -latr
       # - uses: sonarsource/sonarqube-scan-action@master
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      #     SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=./sonar.keystore
+      #     SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=${{ secrets.SONAR_KEY_TOOL }}
 
