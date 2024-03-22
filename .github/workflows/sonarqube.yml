@@ -32,5 +32,5 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=sonar.keystore
+          SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.trustStore=sonar.keystore
 
