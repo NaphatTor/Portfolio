@@ -25,12 +25,12 @@ jobs:
           creds: ${{ secrets.Azure_Credential }}
       - name: Download Keytool
         run: |
-          az storage blob download --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --container-name ${{ secrets.AZURE_CONTAINER_NAME }} --name ${{ secrets.AZURE_BLOB_NAME }} --file ${{ secrets.SONAR_KEYSTORE_FILE }}
+          az storage blob download --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --container-name ${{ secrets.AZURE_CONTAINER_NAME }} --name ${{ secrets.AZURE_BLOB_NAME }} --file sonar.keystore
           pwd
           ls -latr
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=${{ secrets.SONAR_KEYSTORE_FILE }}
+          SONAR_SCANNER_OPTS: -Djavax.net.ssl.trustStorePassword=${{ secrets.SONAR_KEYSTORE_PASSWORD }} -Djavax.net.ssl.trustStore=sonar.keystore
 
