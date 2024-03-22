@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: SonarQube Scan
-    if: contains(github.event.head_commit.message, '[scan]')
+    if: contains(github.event.head_commit.message, 'scan')
     # runs-on: KANOMNUTT
     runs-on: ubuntu-latest
     env:
