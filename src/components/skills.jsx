@@ -7,9 +7,7 @@ import {
   SiOpentelemetry,
   SiGo,
   SiHelm,
-  SiCilium,
   SiArgo,
-  SiC,
   SiJenkins
 } from 'react-icons/si'
 
