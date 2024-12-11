@@ -1,9 +1,16 @@
 import React from 'react'
 import {
-  SiMicrosoftazure, SiAzuredevops, SiTerraform, SiAnsible, SiKubernetes,
+  SiMicrosoftazure, SiTerraform, SiAnsible, SiKubernetes,
   SiDocker, SiPrometheus, SiGrafana, SiLinux, SiVmware, SiPython, SiJavascript,
-  SiVeeam, SiGnubash, SiApachekafka, SiVite, SiReact, SiNextdotjs, SiTailwindcss,
-  SiMongodb, SiNodedotjs, SiGit, SiPostgresql, SiAmazonaws, SiPrisma
+  SiVeeam, SiGnubash, SiApachekafka, SiReact, SiNextdotjs, SiTailwindcss,
+  SiMongodb, SiNodedotjs, SiGit, SiPostgresql, SiAmazonaws, SiPrisma,
+  SiOpentelemetry,
+  SiGo,
+  SiHelm,
+  SiCilium,
+  SiArgo,
+  SiC,
+  SiJenkins
 } from 'react-icons/si'
 
 const Skills = () => {
@@ -14,20 +21,20 @@ const Skills = () => {
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiMicrosoftazure className='mr-2' />Azure
         </li>
-        {/* <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center">
-        <SiAzuredevops className='mr-2'/>Azure DevOps
-      </li> */}
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiTerraform className='mr-2' />Terraform
-        </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiAnsible className='mr-2' />Ansible
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiGit className='mr-2' />Git
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiKubernetes className='mr-2' />Kuberbetes
+        </li>
+        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
+          <SiArgo className='mr-2' />ArgoCD
+        </li>
+        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
+          <SiHelm className='mr-2' />HelmChart
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiDocker className='mr-2' />Docker
@@ -37,6 +44,9 @@ const Skills = () => {
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiGrafana className='mr-2' />Grafana
+        </li>
+        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
+          <SiOpentelemetry className='mr-2' />OpenteleMetry
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiApachekafka className='mr-2' />Kafka
@@ -70,6 +80,9 @@ const Skills = () => {
           <SiAmazonaws className='mr-2' />AWS Cloud
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
+          <SiJenkins className='mr-2' />Jenkins
+        </li>
+        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiNodedotjs className='mr-2' />Node.JS
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
@@ -79,10 +92,13 @@ const Skills = () => {
           <SiNextdotjs className='mr-2' />Next.JS
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiVite className='mr-2' />Vite.JS
+          <SiGo className='mr-2' />Golang
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiTailwindcss className='mr-2' />Tailwind
+        </li>
+        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
+          <SiAnsible className='mr-2' />Ansible
         </li>
         <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
           <SiPostgresql className='mr-2' />PostgreSQL
