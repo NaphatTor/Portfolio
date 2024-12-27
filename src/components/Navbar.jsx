@@ -15,18 +15,6 @@ function MobileNav({ open, setOpen }) {
         <NavLink to='#exp'>Experience</NavLink>
         <NavLink to='#skills'>Skills</NavLink>
         <NavLink to='https://stseakanomnutt.blob.core.windows.net/portfolio/ThanachaiT-Resume.pdf' target='_blank'>Resume</NavLink>
-        {/* <a className="text-xl font-mono my-4 text-black" href="#about" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
-          About
-        </a>
-        <a className="text-xl font-mono my-4 text-black" href="#exp" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
-          Experience
-        </a>
-        <a className="text-xl font-mono my-4 text-black" href="#skill" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
-          Skill
-        </a>
-        <a target='_blank' className="text-xl font-mono my-4 text-black" href="https://az-blob.kanomnutt.site/portfolio/ThanachaiT-Resume.pdf" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
-          Resume
-        </a> */}
       </div>
     </div>
   );

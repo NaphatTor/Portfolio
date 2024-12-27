@@ -9,8 +9,18 @@ import { useState } from 'react'
 const About = () => {
   const [isCopied, setIsCopied] = useState();
 
-  const handleCopyClick = () => {
+  const handleCopyClickMobile = () => {
     navigator.clipboard.writeText(mobile)
+      .then(() => {
+        setIsCopied(true);
+      })
+      .catch(error => {
+        console.error('Error copying text:', error);
+      });
+  };
+
+  const handleCopyClickEmail = () => {
+    navigator.clipboard.writeText(email)
       .then(() => {
         setIsCopied(true);
       })
@@ -23,7 +33,7 @@ const About = () => {
     setIsCopied(false);
   };
 
-  const mobile = "+66(0)83 990 7607"
+  const mobile = "+6683-990-7607"
   const email = "thanachai.tre@gmail.com"
   return (
     <section id='about' className="mb-25 text-center sm:mb-25 text-black font-mono">
@@ -32,23 +42,14 @@ const About = () => {
         <h1 className="mb-5 mt-4 sm:mb-5 sm:mt-5 px-4 font-medium">
           <span className='text-2xl sm:text-2xl font-bold'>Hello, I'm Thanachai (Nut).</span>
           <span className="mt-1 block sm:mt-1"></span>
-          <span className='text-xl sm:text-xl'>I'm a Cloud Engineer with 3 years experience.</span>{" "}
-          <span className='text-xl sm:text-xl'> I working in DevOps Culture.</span>{" "}
+          <span className='text-lg sm:text-xl'>I'm a Cloud Engineer with 3 years experience.</span>{" "}
+          <span className='text-lg sm:text-xl'> I working in DevOps Culture.</span>{" "}
           <span className="mt-1 block sm:mt-1"></span>
-          <span className='text-xl sm:text-xl'>My focus is Managed Azure Hybrid Cloud infrastructure, Deploy and Managed applications on K8s or AKS clusters</span> {" "}
-          <span className='text-xl sm:text-xl'>and learning a new technologies.</span>{" "}
-          <span className='text-xl sm:text-xl'>Currently I try to learning about programming language JavaScript, Node.JS, React, Next.JS and more.</span>
+          <span className='text-lg sm:text-xl'>My focus is Managed Azure Hybrid Cloud infrastructure, Deploy and Managed applications on K8s or AKS clusters.</span> {" "}
+          <span className='text-lg sm:text-xl'>I am passionate about learning new technologies</span>{" "}
+          <span className='text-lg sm:text-xl'>and currently focusing on programming languages like JavaScript, Node.js, Golang, and more.</span>
         </h1>
         <div className='flex gap-2 flex-wrap justify-center'>
-          {/* <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
-              href="mailto: thanachai.tre@gmail.com" >
-              <SiGmail className='text-3xl' />
-            </a> */}
-          {/* <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer tooltip"
-              href="tel: +66839907067"
-              title='+66 83 990 7607'>
-              <BiSolidPhoneCall className='text-3xl' />
-            </a> */}
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
             onClick={() => document.getElementById('email').showModal()}>
             <SiGmail className='text-3xl' />
@@ -57,25 +58,7 @@ const About = () => {
             <div className="modal-box text-black bg-slate-100">
               <h3 className="font-mono font-semibold text-2xl">EMAIL ADDRESS</h3>
               <div className="sm:flex sm:flex-col sm:justify-center sm:gap-2">
-                <p className="py-4 px-4 font-mono text-lg">{email}</p>
-                <button className='hidden md:block text-lg py-2 items-center px-2'>
-                  {isCopied ? (
-                    <span className="border border-black/[0.5] rounded-full px-20 py-3">
-                      Copied
-                    </span>
-                    ) : (
-                    <span
-                      className="border border-black/[0.5] rounded-full px-20 py-3"
-                      onClick={handleCopyClick}
-                    >
-                      Copy
-                    </span>
-                  )}
-                </button>
-                {/* <button className='hidden md:block text-lg border border-black/[0.5] rounded-full py-2 items-center px-2' 
-                onClick={handleCopyClick}>
-                  {isCopied ? 'Copied' : 'Copy'}
-                </button> */}
+                <p className="py-4 px-4 font-mono text-lg sm:text-xl">{email}</p>
               </div>
               <div className="modal-action">
                 <form method="dialog">
@@ -83,6 +66,20 @@ const About = () => {
                   onClick={handleCloseModal}>Close</button>
                 </form>
               </div>
+              <button className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
+                {isCopied ? (
+                  <span className="btn bg-slate-300 text-black sm:hover:text-white sm:visible invisible">
+                    Copied
+                  </span>
+                  ) : (
+                  <span
+                    className="btn bg-slate-100 text-black hover:text-white sm:visible invisible"
+                    onClick={handleCopyClickEmail}
+                  >
+                    Copy
+                  </span>
+                )}
+              </button>
             </div>
           </dialog>
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
@@ -93,25 +90,7 @@ const About = () => {
             <div className="modal-box text-black bg-slate-100">
               <h3 className="font-mono font-semibold text-2xl">MOBILE NUMBER</h3>
               <div className="sm:flex sm:flex-col sm:justify-center sm:gap-2">
-                <p className="py-4 px-4 font-mono text-lg">{mobile}</p>
-                <button className='hidden md:block text-lg py-2 items-center px-2'>
-                  {isCopied ? (
-                    <span className="border border-black/[0.5] rounded-full px-20 py-3">
-                      Copied
-                    </span>
-                    ) : (
-                    <span
-                      className="border border-black/[0.5] rounded-full px-20 py-3"
-                      onClick={handleCopyClick}
-                    >
-                      Copy
-                    </span>
-                  )}
-                </button>
-                {/* <button className='hidden md:block text-lg border border-black/[0.5] rounded-full py-2 items-center px-2' 
-                  onClick={handleCopyClick}>
-                  {isCopied ? 'Copied' : 'Copy'}
-                </button> */}
+                <p className="py-4 px-4 font-mono text-lg sm:text-xl">{mobile}</p>
               </div>
               <div className="modal-action">
                 <form method="dialog">
@@ -119,6 +98,20 @@ const About = () => {
                   onClick={handleCloseModal}>Close</button>
                 </form>
               </div>
+              <button className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
+                {isCopied ? (
+                  <span className="btn bg-slate-300 text-black sm:hover:text-white sm:visible invisible">
+                    Copied
+                  </span>
+                  ) : (
+                  <span
+                    className="btn bg-slate-100 text-black hover:text-white sm:visible invisible"
+                    onClick={handleCopyClickMobile}
+                  >
+                    Copy
+                  </span>
+                )}
+              </button>
             </div>
           </dialog>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"

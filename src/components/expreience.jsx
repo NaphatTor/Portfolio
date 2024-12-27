@@ -26,9 +26,10 @@ const Expreience = () => {
             iconStyle={{ background: 'rgb(255, 255, 255)' }}
             icon={<MdWorkOutline/>}>
               <h3 className="vertical-timeline-element-title text-xl">Cloud Engineer</h3>
-              <h4 className="vertical-timeline-element-subtitle">RIS, TH</h4>
+              <h4 className="vertical-timeline-element-subtitle">RIS Co.,Ltd. </h4>
+              <h4 className='vertical-timeline-element-subtitle'> Bangkok, TH </h4>
               <p >
-                Managed Azure Hybrid Cloud Infrastructure with VMware On-premise, Managed and Deployed applications to AKS Clusters.                      
+                Managed hybrid cloud infrastructure on Azure integrated with on-premises VMware, and deployed and managed applications on AKS clusters.                      
               </p>
               
             </VerticalTimelineElement>
@@ -46,7 +47,8 @@ const Expreience = () => {
               icon={<MdWorkOutline />}
             >
               <h3 className="vertical-timeline-element-title text-xl">DevOps Engineer</h3>
-              <h4 className="vertical-timeline-element-subtitle">Leap Solutions Asia, TH</h4>
+              <h4 className="vertical-timeline-element-subtitle">Leap Solutions Asia Co.,Ltd.</h4>
+              <h4 className='vertical-timeline-element-subtitle'> Bangkok, TH </h4>
               <p>
                 Managed K8s clusters and Middle-ware Applications in On-Prem Environment.
               </p>
@@ -65,7 +67,8 @@ const Expreience = () => {
               icon={<MdWorkOutline />}
             >
               <h3 className="vertical-timeline-element-title text-xl">Cloud Engineer</h3>
-              <h4 className="vertical-timeline-element-subtitle">Leap Solutions Asia, TH</h4>
+              <h4 className="vertical-timeline-element-subtitle">Leap Solutions Asia Co.,Ltd.</h4>
+              <h4 className='vertical-timeline-element-subtitle'> Bangkok, TH </h4>
               <p>
                 Managed and Monitoring VPS and Priviate Cloud based on VMWare Product.
               </p>
@@ -84,7 +87,8 @@ const Expreience = () => {
               icon={<MdWorkOutline />}
             >
               <h3 className="vertical-timeline-element-title text-xl">Delivery Engineer</h3>
-              <h4 className="vertical-timeline-element-subtitle">Noventiq (Thailand), TH</h4>
+              <h4 className="vertical-timeline-element-subtitle">Noventiq (Thailand) Co,.Ltd.</h4>
+              <h4 className='vertical-timeline-element-subtitle'> Bangkok, TH </h4>
               <p>
                 Imprement and Support Microsoft 365 Product.
               </p>
