@@ -40,14 +40,12 @@ const About = () => {
       <h2 className="text-3xl mb-5 mt-7 text-center font-mono">About Me</h2>
       <div className="flex flex-col items-center justify-center font-mono">
         <h1 className="mb-5 mt-4 sm:mb-5 sm:mt-5 px-4 font-medium">
-          <span className='text-2xl sm:text-2xl font-bold'>Hello, I'm Thanachai (Nut).</span>
+          <span className='text-2xl sm:text-2xl font-bold'>Hello, I'm Thanachai (Nut)</span>
           <span className="mt-1 block sm:mt-1"></span>
-          <span className='text-lg sm:text-xl'>I'm a Cloud Engineer with 3 years experience.</span>{" "}
-          <span className='text-lg sm:text-xl'> I working in DevOps Culture.</span>{" "}
-          <span className="mt-1 block sm:mt-1"></span>
-          <span className='text-lg sm:text-xl'>My focus is Managed Azure Hybrid Cloud infrastructure, Deploy and Managed applications on K8s or AKS clusters.</span> {" "}
-          <span className='text-lg sm:text-xl'>I am passionate about learning new technologies</span>{" "}
-          <span className='text-lg sm:text-xl'>and currently focusing on programming languages like JavaScript, Node.js, Golang, and more.</span>
+          <span className='text-lg sm:text-xl'>Cloud DevOps Engineer with 3 years of experience</span>{" "}
+          <span className='text-lg sm:text-xl'>in managing Azure Hybrid Cloud infrastructure</span>{" "}
+          <span className='text-lg sm:text-xl'>and implementing CI/CD pipelines for Kubernetes-based deployments.</span> {" "}
+          <span className='text-lg sm:text-xl'>Passionate about automation, monitoring, and optimizing cloud environments to enhance system reliability and performance</span>
         </h1>
         <div className='flex gap-2 flex-wrap justify-center'>
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
@@ -119,7 +117,7 @@ const About = () => {
             <BsLinkedin className='text-3xl' />
           </a>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
-            href="https://gitlab.com/thanachai.tre/thanachai-knowledge">
+            href="https://gitlab.com/thanachai.tre/projects">
             <FaGitlab className='text-4xl' />
           </a>
           <a target='_blank' className="group bg-white ml-2 px-4 py-5 sm:py-2 flex p-2 hover:text-gray-950 items-center gap-1 rounded-full hover:scale-[1.15] cursor-pointer"
