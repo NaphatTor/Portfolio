@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="fixed filter drop-shadow bottom-0 bg-white text-black font-mono w-full p-2 z-50 text-sm sm:text-base">
+    <div className="bg-white text-black font-mono w-full p-2 z-50 text-sm sm:text-base transition-opacity duration-300">
       <div className="flex justify-between items-center flex-col sm:flex-row">
         <div className="flex items-center sm:mb-0">
           <span className="mr-1">
