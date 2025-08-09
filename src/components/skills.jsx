@@ -4,105 +4,113 @@ import {
   SiDocker, SiPrometheus, SiGrafana, SiLinux, SiVmware, SiPython, SiJavascript,
   SiVeeam, SiGnubash, SiApachekafka, SiReact, SiNextdotjs, SiTailwindcss,
   SiMongodb, SiNodedotjs, SiGit, SiPostgresql, SiAmazonaws, SiPrisma,
-  SiOpentelemetry,
-  SiGo,
-  SiHelm,
-  SiArgo,
-  SiJenkins
-} from 'react-icons/si'
+  SiOpentelemetry, SiGo, SiHelm, SiArgo, SiJenkins, SiGooglecloud, SiGitlab
+} from 'react-icons/si';
 
 const Skills = () => {
+  const sectionClass = "text-center font-mono sm:mb-20 mb-20 text-black"
+  const titleClass = "text-3xl font-medium capitalize mb-8 text-center"
+  const skillListClass = "flex flex-wrap justify-center gap-2 text-lg text-gray-800"
+  const skillItemClass = "bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]"
+  const iconClass = "mr-2"
+
   return (
-    <section id="skill" className="text-center font-mono sm:mb-20 mb-20 text-black">
-      <div className="text-3xl font-medium capitalize mb-8 text-center">My Skills</div>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiMicrosoftazure className='mr-2' />Azure
+    <section id="skill" className={sectionClass}>
+      <div className={titleClass}>Skills</div>
+      <ul className={skillListClass}>
+        <li className={skillItemClass}>
+          <SiMicrosoftazure className={iconClass} />Azure
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiTerraform className='mr-2' />Terraform
+        <li className={skillItemClass}>
+          <SiGooglecloud className={iconClass} />GCP
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiGit className='mr-2' />Git
+        <li className={skillItemClass}>
+          <SiTerraform className={iconClass} />Terraform
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiKubernetes className='mr-2' />Kuberbetes
+        <li className={skillItemClass}>
+          <SiGitlab className={iconClass} />Gitlab
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiArgo className='mr-2' />ArgoCD
+        <li className={skillItemClass}>
+          <SiGit className={iconClass} />Git
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiHelm className='mr-2' />HelmChart
+        <li className={skillItemClass}>
+          <SiKubernetes className={iconClass} />Kuberbetes
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiDocker className='mr-2' />Docker
+        <li className={skillItemClass}>
+          <SiArgo className={iconClass} />ArgoCD
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiPrometheus className='mr-2' />Prometheus
+        <li className={skillItemClass}>
+          <SiHelm className={iconClass} />HelmChart
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiGrafana className='mr-2' />Grafana
+        <li className={skillItemClass}>
+          <SiDocker className={iconClass} />Docker
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiOpentelemetry className='mr-2' />OpenteleMetry
+        <li className={skillItemClass}>
+          <SiPrometheus className={iconClass} />Prometheus
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiApachekafka className='mr-2' />Kafka
+        <li className={skillItemClass}>
+          <SiGrafana className={iconClass} />Grafana
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiLinux className='mr-2' />Linux
+        <li className={skillItemClass}>
+          <SiOpentelemetry className={iconClass} />OpenteleMetry
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiGnubash className='mr-2' />Bash
+        <li className={skillItemClass}>
+          <SiApachekafka className={iconClass} />Kafka
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiVmware className='mr-2' />VMWare
+        <li className={skillItemClass}>
+          <SiLinux className={iconClass} />Linux
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiVeeam className='mr-2' />Veeam Backup
+        <li className={skillItemClass}>
+          <SiGnubash className={iconClass} />Bash
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiMongodb className='mr-2' />MongoDB
+        <li className={skillItemClass}>
+          <SiVmware className={iconClass} />VMWare
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiPython className='mr-2' />Python
+        <li className={skillItemClass}>
+          <SiVeeam className={iconClass} />Veeam Backup
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiJavascript className='mr-2' />JavaScript
+        <li className={skillItemClass}>
+          <SiMongodb className={iconClass} />MongoDB
+        </li>
+        <li className={skillItemClass}>
+          <SiPython className={iconClass} />Python
+        </li>
+        <li className={skillItemClass}>
+          <SiJavascript className={iconClass} />JavaScript
         </li>
       </ul>
 
-      <div className="text-3xl font-medium capitalize mt-12 mb-8 text-center">My Interests</div>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiAmazonaws className='mr-2' />AWS Cloud
+      <div className={`${titleClass} mt-12`}>Interested</div>
+      <ul className={skillListClass}>
+        <li className={skillItemClass}>
+          <SiAmazonaws className={iconClass} />AWS Cloud
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiJenkins className='mr-2' />Jenkins
+        <li className={skillItemClass}>
+          <SiJenkins className={iconClass} />Jenkins
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiNodedotjs className='mr-2' />Node.JS
+        <li className={skillItemClass}>
+          <SiNodedotjs className={iconClass} />Node.JS
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiReact className='mr-2' />React.JS
+        <li className={skillItemClass}>
+          <SiReact className={iconClass} />React.JS
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiNextdotjs className='mr-2' />Next.JS
+        <li className={skillItemClass}>
+          <SiNextdotjs className={iconClass} />Next.JS
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiGo className='mr-2' />Golang
+        <li className={skillItemClass}>
+          <SiGo className={iconClass} />Golang
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiTailwindcss className='mr-2' />Tailwind
+        <li className={skillItemClass}>
+          <SiTailwindcss className={iconClass} />Tailwind
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiAnsible className='mr-2' />Ansible
+        <li className={skillItemClass}>
+          <SiAnsible className={iconClass} />Ansible
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiPostgresql className='mr-2' />PostgreSQL
+        <li className={skillItemClass}>
+          <SiPostgresql className={iconClass} />PostgreSQL
         </li>
-        <li className="bg-white border border-black/[0.1] rounded-xl px-4 py-2 flex items-center hover:scale-[1.15]">
-          <SiPrisma className='mr-2' />Prisma
+        <li className={skillItemClass}>
+          <SiPrisma className={iconClass} />Prisma
         </li>
       </ul>
     </section>

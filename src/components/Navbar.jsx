@@ -10,12 +10,16 @@ function NavLink({ to, children }) {
 function MobileNav({ open, setOpen }) {
   return (
     <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-      <div className="flex flex-col ml-14 mt-20 text-black text-xl font-mono" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
+      <button 
+        className="flex flex-col ml-14 mt-20 text-black text-xl font-mono text-left bg-transparent border-none" 
+        onClick={() => setTimeout(() => { setOpen(!open) }, 100)}
+        aria-label="Close mobile navigation"
+      >
         <NavLink to='#about'>About</NavLink>
         <NavLink to='#exp'>Experience</NavLink>
         <NavLink to='#skills'>Skills</NavLink>
         <NavLink to='https://stseakanomnutt.blob.core.windows.net/portfolio/ThanachaiT-Resume.pdf' target='_blank'>Resume</NavLink>
-      </div>
+      </button>
     </div>
   );
 }

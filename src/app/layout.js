@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Thanachai T. Portfolio',
 }
 
+// eslint-disable-next-line react/prop-types
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

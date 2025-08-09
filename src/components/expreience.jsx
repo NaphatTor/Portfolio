@@ -12,6 +12,29 @@ const Expreience = () => {
           <VerticalTimeline lineColor='darkgrey' >
             <VerticalTimelineElement
             className='vertical-timeline-element--work'
+            contentStyle={{
+              background: 'rgb(255, 255, 255)',
+              border: "1px solid rgba(0, 0, 0, 0.05)",
+              textAlign: "left",
+              boxShadow: "10px 5px 5px lightgrey"
+            }}
+            contentArrowStyle={{
+              borderRight: '7px solid  rgb(255,255,255)',
+              
+            }}
+            date='Jun 2025 - Present'
+            iconStyle={{ background: 'rgb(255, 255, 255)' }}
+            icon={<MdWorkOutline/>}>
+              <h3 className="vertical-timeline-element-title text-xl">DevOps Engineer</h3>
+              <h4 className="vertical-timeline-element-subtitle">7Solutions Co.,Ltd. </h4>
+              <h4 className='vertical-timeline-element-subtitle'> Bangkok, TH </h4>
+              <p >
+                Managed Google Cloud Platform and Gitlab DevSeOps CI/CD pipelines with ArgoCD
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+            className='vertical-timeline-element--work'
             contentStyle={{ 
               background: 'rgb(255, 255, 255)',
               border: "1px solid rgba(0, 0, 0, 0.05)",
@@ -22,7 +45,7 @@ const Expreience = () => {
               borderRight: '7px solid  rgb(255,255,255)',
               
             }}
-            date='Mar 2023 - Present'
+            date='Mar 2023 - Jun 2025'
             iconStyle={{ background: 'rgb(255, 255, 255)' }}
             icon={<MdWorkOutline/>}>
               <h3 className="vertical-timeline-element-title text-xl">Cloud Engineer</h3>

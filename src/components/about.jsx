@@ -42,10 +42,11 @@ const About = () => {
         <h1 className="mb-5 mt-4 sm:mb-5 sm:mt-5 px-4 font-medium">
           <span className='text-2xl sm:text-2xl font-bold'>Hello, I'm Thanachai (Nut)</span>
           <span className="mt-1 block sm:mt-1"></span>
-          <span className='text-lg sm:text-xl'>Cloud DevOps Engineer with 3 years of experience</span>{" "}
-          <span className='text-lg sm:text-xl'>in managing Azure Hybrid Cloud infrastructure</span>{" "}
-          <span className='text-lg sm:text-xl'>and implementing CI/CD pipelines for Kubernetes-based deployments.</span> {" "}
-          <span className='text-lg sm:text-xl'>Passionate about automation, monitoring, and optimizing cloud environments to enhance system reliability and performance</span>
+          <span className='text-lg sm:text-xl'>Cloud DevOps Engineer with 3 years of hands-on experience</span>{" "}
+          <span className='text-lg sm:text-xl'>managing Azure Hybrid Cloud infrastructure, Google Cloud infrastructure</span>{" "}
+          <span className='text-lg sm:text-xl'>and building DevSecOps CI/CD pipelines for Kubernetes-based deployments.</span> {" "}
+          <span className='text-lg sm:text-xl'> I enjoy streamlining processes through automation, improving observability with effective monitoring, </span>
+          <span className='text-lg sm:text-xl'> and constantly fine-tuning cloud environments to boost performance and reliability. I’m passionate about solving problems and helping teams move faster and more confidently in the cloud</span>
         </h1>
         <div className='flex gap-2 flex-wrap justify-center'>
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
@@ -64,20 +65,20 @@ const About = () => {
                   onClick={handleCloseModal}>Close</button>
                 </form>
               </div>
-              <button className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
+              <div className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
                 {isCopied ? (
                   <span className="btn bg-slate-300 text-black sm:hover:text-white sm:visible invisible">
                     Copied
                   </span>
                   ) : (
-                  <span
+                  <button
                     className="btn bg-slate-100 text-black hover:text-white sm:visible invisible"
                     onClick={handleCopyClickEmail}
                   >
                     Copy
-                  </span>
+                  </button>
                 )}
-              </button>
+              </div>
             </div>
           </dialog>
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
@@ -96,20 +97,20 @@ const About = () => {
                   onClick={handleCloseModal}>Close</button>
                 </form>
               </div>
-              <button className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
+              <div className='text-lg py-2 items-center px-2 absolute bottom-4 left-4'>
                 {isCopied ? (
                   <span className="btn bg-slate-300 text-black sm:hover:text-white sm:visible invisible">
                     Copied
                   </span>
                   ) : (
-                  <span
+                  <button
                     className="btn bg-slate-100 text-black hover:text-white sm:visible invisible"
                     onClick={handleCopyClickMobile}
                   >
                     Copy
-                  </span>
+                  </button>
                 )}
-              </button>
+              </div>
             </div>
           </dialog>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
@@ -117,7 +118,7 @@ const About = () => {
             <BsLinkedin className='text-3xl' />
           </a>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
-            href="https://gitlab.com/thanachai.tre/projects">
+            href="https://gitlab.com/thanachai.tre/">
             <FaGitlab className='text-4xl' />
           </a>
           <a target='_blank' className="group bg-white ml-2 px-4 py-5 sm:py-2 flex p-2 hover:text-gray-950 items-center gap-1 rounded-full hover:scale-[1.15] cursor-pointer"
