@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as SI from 'react-icons/si'
 
 const styles = {
@@ -51,16 +52,30 @@ const SkillItem = ({ Icon, name }) => (
   </li>
 );
 
+SkillItem.propTypes = {
+  Icon: PropTypes.elementType.isRequired,
+  name: PropTypes.string.isRequired,
+};
 const SkillSection = ({ title, items }) => (
   <>
     <div className={`${styles.title} ${title === "Interested" ? "mt-12" : ""}`}>{title}</div>
     <ul className={styles.skillList}>
-      {items.map((item, index) => (
-        <SkillItem key={index} Icon={item.icon} name={item.name} />
+      {items.map((item) => (
+        <SkillItem key={item.name} Icon={item.icon} name={item.name} />
       ))}
     </ul>
   </>
 );
+
+SkillSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.elementType.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 const Skills = () => {
   return (

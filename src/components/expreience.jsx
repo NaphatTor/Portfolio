@@ -3,6 +3,7 @@ import React from 'react';
 import { MdStarOutline, MdWorkOutline } from 'react-icons/md';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import PropTypes from 'prop-types';
 
 const timelineElementStyle = {
   background: 'rgb(255, 255, 255)',
@@ -66,6 +67,14 @@ const TimelineElement = ({ title, company, location, period, description }) => (
     <p>{description}</p>
   </VerticalTimelineElement>
 );
+
+TimelineElement.propTypes = {
+  title: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  period: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 const Experience = () => {
   return (
