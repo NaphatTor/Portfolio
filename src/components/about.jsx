@@ -114,7 +114,7 @@ const About = () => {
             </div>
           </dialog>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
-            href="https://www.linkedin.com/in/thanachai-treratdilokkul-bb2622208/">
+            href="https://www.linkedin.com/in/thanachai-t-bb2622208/">
             <BsLinkedin className='text-3xl' />
           </a>
           <a target='_blank' className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
