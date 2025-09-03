@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Thanachai T. Portfolio',
+  title: 'Naphat Tor. Portfolio',
 }
 
 // eslint-disable-next-line react/prop-types

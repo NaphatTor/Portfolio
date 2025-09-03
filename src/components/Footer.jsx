@@ -16,7 +16,7 @@ const Footer = () => {
           <span className="ml-2">{currentYear} All rights reserved</span>
         </div>
         <div className="flex items-center mt-2 sm:mt-0">
-          <span>Portfolio's Thanachai |</span>
+          <span>Portfolio's Naphat |</span>
           <span className="sm:ml-2">Powered by</span>
           <span className="sm:ml-2 ml-2 text-xl">
             <TbBrandNextjs />

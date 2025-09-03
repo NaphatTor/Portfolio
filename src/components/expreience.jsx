@@ -13,44 +13,30 @@ const timelineElementStyle = {
 };
 
 const experienceData = [
-  {
-    title: "DevOps Engineer",
-    company: "7Solutions Co.,Ltd.",
-    location: "Bangkok, TH",
-    period: "Jun 2025 - Present",
-    description: "Managed Google Cloud Platform and Gitlab DevSeOps CI/CD pipelines with ArgoCD"
+    {
+    title: "Socket XO",
+    role: "Real-time XO client (Python)",
+    tools: "Python",
+    period: "2025",
+    description: "Developed the Python client-side application for a real-time two-player XO game using socket programming, enabling synchronous gameplay via terminal."
   },
   {
-    title: "Cloud Engineer",
-    company: "RIS Co.,Ltd.",
-    location: "Bangkok, TH",
-    period: "Mar 2023 - Jun 2025",
-    description: "Managed hybrid cloud infrastructure on Azure integrated with on-premises VMware, and deployed and managed applications on AKS clusters."
+    title: "Find Edu Bot",
+    role: "Assessment chatbot for personality analysis",
+    tools: "Line Developers, LINE OA, Boinoi, DriveToWeb , Figma, Draw.io, Notepad++ ",
+    period: "2024",
+    description: "Developed a LINE chatbot using Holland’s theory to assess personality and provide career guidance, enabling students to make more informed education and career choices."
   },
   {
-    title: "DevOps Engineer",
-    company: "Leap Solutions Asia Co.,Ltd.",
-    location: "Bangkok, TH",
-    period: "May 2022 - Mar 2023",
-    description: "Managed K8s clusters and Middle-ware Applications in On-Prem Environment."
-  },
-  {
-    title: "Cloud Engineer",
-    company: "Leap Solutions Asia Co.,Ltd.",
-    location: "Bangkok, TH",
-    period: "Feb 2022 - May 2022",
-    description: "Managed and Monitoring VPS and Priviate Cloud based on VMWare Product."
-  },
-  {
-    title: "Delivery Engineer",
-    company: "Noventiq (Thailand) Co,.Ltd.",
-    location: "Bangkok, TH",
-    period: "Feb 2021 - Feb 2022",
-    description: "Imprement and Support Microsoft 365 Product."
+    title: "Randoof Food Random",
+    role: "Smart vending machine",
+    tools: "Figma and Canva (for UI/UX and visual mockups)",
+    period: "2023",
+    description: "Designed and developed the end-to-end concept of a smart vending machine for university students, covering UX/UI, business model, and pitch presentation."
   }
 ];
 
-const TimelineElement = ({ title, company, location, period, description }) => (
+const TimelineElement = ({ title, role, tools, period, description }) => (
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={timelineElementStyle}
@@ -62,16 +48,16 @@ const TimelineElement = ({ title, company, location, period, description }) => (
     icon={<MdWorkOutline />}
   >
     <h3 className="vertical-timeline-element-title text-xl">{title}</h3>
-    <h4 className="vertical-timeline-element-subtitle">{company}</h4>
-    <h4 className="vertical-timeline-element-subtitle">{location}</h4>
+    <h4 className="vertical-timeline-element-subtitle">{role}</h4>
+    <h4 className="vertical-timeline-element-subtitle">{tools}</h4>
     <p>{description}</p>
   </VerticalTimelineElement>
 );
 
 TimelineElement.propTypes = {
   title: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  tools: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
@@ -79,7 +65,7 @@ TimelineElement.propTypes = {
 const Experience = () => {
   return (
     <section className="mb-25 text-center sm:mb-25 text-black">
-      <h2 className="text-3xl mb-10 text-center font-mono">Work Experience</h2>
+      <h2 className="text-3xl mb-10 text-center font-mono">Project</h2>
       <div className="flex flex-col items-center justify-center font-mono">
         <VerticalTimeline lineColor='darkgrey'>
           {experienceData.map((experience, index) => (
