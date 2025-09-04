@@ -120,7 +120,7 @@ const About = () => {
             <FaGithub className='text-4xl' />
           </a>
           <a target='_blank' className="group bg-white ml-2 px-4 py-5 sm:py-2 flex p-2 hover:text-gray-950 items-center gap-1 rounded-full hover:scale-[1.15] cursor-pointer"
-            href="http://localhost:8080/MyResume.pdf">
+            href="/MyResume.pdf">
             <span className='flex font-mono text-lg'>My Resume <FaDownload className='text-xl ml-2' /></span>
           </a>
         </div>

@@ -18,7 +18,7 @@ function MobileNav({ open, setOpen }) {
         <NavLink to='#about'>About</NavLink>
         <NavLink to='#exp'>Experience</NavLink>
         <NavLink to='#skills'>Skills</NavLink>
-        <NavLink to='http://localhost:8080/MyResume.pdf' target='_blank'>Resume</NavLink>
+        <NavLink to='/MyResume.pdf' target='_blank'>Resume</NavLink>
       </button>
     </div>
   );
@@ -51,7 +51,7 @@ export default function Navbar() {
           <NavLink to="#about">ABOUT</NavLink>
           <NavLink to="#exp">WORK EXPERIENCE</NavLink>
           <NavLink to="#skills">SKILLS</NavLink>
-          <NavLink target="_blank" to="http://localhost:8080/MyResume.pdf">RESUME</NavLink>
+          <NavLink target="_blank" to="/MyResume.pdf">RESUME</NavLink>
         </div>
         <MobileNav open={open} setOpen={setOpen} />
       </div>
