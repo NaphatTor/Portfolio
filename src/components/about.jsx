@@ -45,6 +45,8 @@ const About = () => {
           <span className='text-lg sm:text-xl'>I’m a focused and responsible developer who enjoys solving problems through hands-on learning </span>{" "}
           <span className='text-lg sm:text-xl'>I’m committed to completing every project I take on,</span>{" "}
           <span className='text-lg sm:text-xl'>and always ready to grow from new challenges.</span> {" "}
+          <span className='text-lg sm:text-xl'>With an open mind and eagerness to learn new skills, </span> {" "}
+          <span className='text-lg sm:text-xl'>I strive to continuously improve myself and contribute to the growth and innovation of the organization.</span> {" "}
          </h1>
         <div className='flex gap-2 flex-wrap justify-center'>
           <button className="flex p-4 hover:text-gray-950 items-center gap-2 rounded-full hover:scale-[1.15] active:scale-105 transition cursor-pointer"
