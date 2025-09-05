@@ -34,7 +34,7 @@ A modern portfolio website built with Next.js to showcase my projects and skills
    npm run dev
    ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+Open [http://localhost:8080](http://localhost:8080) to view the portfolio.
 
 ## 📁 Project Structure
 
