@@ -21,7 +21,7 @@ A modern portfolio website built with Next.js to showcase my projects and skills
 
 1. Clone the repository:
    ```bash
-   git clone [repo-url]
+   git clone https://github.com/NaphatTor/Portfolio.git
    ```
 
 2. Install dependencies:
